@@ -45,13 +45,12 @@ public class Machine {
 
     public boolean dispense(int row, int spot) {
 
-        System.out.println(this.items[row].length);
-        System.out.println(this.items[spot].length);
-
-        if (row >= this.items[row].length && spot >= this.items[spot].length)
+        if (row >= items.length || spot >= items.length) {
+            
             return false;
+        }
 
-        if (row < items.length && spot < items.length && this.items[row][spot].getQuantity() > 0) {
+        if (this.items[row][spot].getQuantity() > 0) {
             this.items[row][spot].setQuantity(this.items[row][spot].getQuantity() - 1);
             return true;
         }
