@@ -45,8 +45,7 @@ public class Main {
             System.out.println("Enjoy your drink! Press 1 to continue");
         }
         if (dispensed == false) {
-            System.out.println(
-                    "Sorry we're out of this item or you have entered a wrong choice. Press 1 to purchase another: or other key to exit");
+            System.out.println("Sorry we're out of this item. Press 1 to purchase another: ");
         }
         if (scan.nextInt() != 1) {
             break;
